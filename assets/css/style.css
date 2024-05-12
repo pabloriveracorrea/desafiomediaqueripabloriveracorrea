@@ -1,0 +1,257 @@
+body {
+  font-family: "Roboto", Arial;
+}
+
+menu {
+  grid-area: menu;
+}
+section {
+  grid-area: filtro;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+/* Globales */
+img {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  width: 100px;
+  background: #566573;
+  color: white;
+  border-radius: 0rem;
+}
+
+.navegacion {
+  display: flex;
+  background: #2e4053;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+  margin: 0px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nag {
+  display: none;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  background: rgb(214, 214, 214);
+  align-items: center;
+}
+.precio {
+  margin: 0px;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  width: 17rem;
+  border-radius: 0.4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(214, 214, 214);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0rem 0rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+.paginas {
+  display: flex;
+  justify-content: center;
+}
+
+.paginas p {
+  background: #566573;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  color: white;
+}
+.paginas p:nth-child(1) {
+  border-bottom-left-radius: 1rem;
+}
+.paginas p:nth-child(5) {
+  border-top-right-radius: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: #566573;
+  align-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+footer p {
+  margin: 0px;
+  margin-bottom: 0.5rem;
+}
+
+.iconos {
+  padding-top: 0.5rem;
+}
+
+/* posicionamiento con grid */
+
+menu {
+  grid-area: menu;
+}
+section {
+  grid-area: filtro;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+nav {
+  grid-area: paginas;
+}
+
+@media (min-width: 576px) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+      "menu menu"
+      "filtro main"
+      "filtro paginas"
+      "footer footer";
+  }
+
+  .icono {
+    display: none;
+  }
+  .nag {
+    display: flex;
+  }
+  .nag p {
+    margin: 0px;
+    padding: 0.4rem;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(214, 214, 214);
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    background: rgb(214, 214, 214);
+    align-items: center;
+  }
+  .precio {
+    margin: 0px;
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 0.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 25% 75%;
+
+    grid-template-areas:
+      "menu filtro"
+      "menu main"
+      "menu main"
+      "footer paginas";
+  }
+
+  .navegacion {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nag {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(214, 214, 214);
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    background: rgb(214, 214, 214);
+    align-items: center;
+  }
+  .precio {
+    margin: 0px;
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    width: 90%;
+    border-radius: 0.4rem;
+  }
+  .paginas {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: gray;
+    justify-content: center;
+    margin: 0;
+  }
+}
